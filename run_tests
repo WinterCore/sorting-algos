@@ -1,0 +1,2 @@
+# --stack-size is used to increase v8's maximum stack size so we don't run into errors with recursive algos
+deno test --unstable --import-map=import_map.json --v8-flags=--stack-size=200000 src/*
