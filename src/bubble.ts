@@ -15,6 +15,6 @@ const bubble = (rawArr: number[]): number[] => {
     return arr;
 };
 
-sortTest('Bubble sort', bubble);
+sortTest("Bubble sort", bubble);
 
 export default bubble;

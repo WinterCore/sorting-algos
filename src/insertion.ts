@@ -15,6 +15,6 @@ const insertion = (rawArr: number[]): number[] => {
     return arr;
 };
 
-sortTest('Insertion sort', insertion);
+sortTest("Insertion sort", insertion);
 
 export default insertion;

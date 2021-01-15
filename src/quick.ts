@@ -33,6 +33,6 @@ const quicksort = (rawArr: number[]): number[] => {
 };
 
 
-sortTest('Quicksort sort', quicksort);
+sortTest("Quicksort sort", quicksort);
 
 export default quicksort;

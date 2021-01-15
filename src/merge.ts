@@ -1,4 +1,4 @@
-import { sortTest } from './utils.ts';
+import { sortTest } from "./utils.ts";
 
 const merge = (arr: number[], start: number, mid: number, end: number): void => {
     let i = start;
@@ -41,6 +41,6 @@ const mergesort = (rawArr: number[]) => {
     return arr;
 };
 
-sortTest('Merge Sort', mergesort);
+sortTest("Merge Sort", mergesort);
 
 export default mergesort;

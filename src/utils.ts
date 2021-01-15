@@ -12,7 +12,7 @@ export const sorter = (a: number, b: number) => a - b;
 // The array is generated outside to keep the values consistent across all test
 const arr = generateArray(50000);
 
-Deno.test('Javascript\'s default sort implementation', () => {
+Deno.test("Javascript's default sort implementation", () => {
 
     const before = performance.now();
 
