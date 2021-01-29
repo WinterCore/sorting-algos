@@ -1,6 +1,6 @@
 import { sortTest } from "./utils.ts";
 
-class MaxHeap {
+class MinHeap {
     private struct: number[] = [];
 
     constructor(arr: number[] = []) {
@@ -50,28 +50,29 @@ class MaxHeap {
     private heapify(i: number): void {
         const l = i * 2 + 1;
         const r = i * 2 + 2;
-        let smallest = i;
+        let sst = i;
         const length = this.size;
 
-        if (l < length && this.struct[l] < this.struct[smallest]) smallest = l;
-        if (r < length && this.struct[r] < this.struct[smallest]) smallest = r;
+        if (l < length && this.struct[l] < this.struct[sst]) sst = l;
+        if (r < length && this.struct[r] < this.struct[sst]) sst = r;
 
 
-        if (smallest !== i) {
-            [this.struct[i], this.struct[smallest]] = [this.struct[smallest], this.struct[i]];
-            this.heapify(smallest);
+        if (sst !== i) {
+            [this.struct[i], this.struct[sst]] = [this.struct[sst], this.struct[i]];
+            this.heapify(sst);
         }
     }
 }
 
 const heapsort = (rawArr: number[]): number[] => {
     const arr = [...rawArr];
-    const heap = new MaxHeap(arr);
+    const heap = new MinHeap(arr);
     const result = []
     while (!heap.empty()) result.push(heap.pop());
 
     return result;
 };
+
 
 sortTest("Heap sort",  heapsort);
 
